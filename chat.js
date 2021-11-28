@@ -1,6 +1,7 @@
 const server = require('net').createServer();
 let counter = 0;
 let participents = {};
+const PORT = process.env.PORT || 8383;
 
 server.on('connection', (socket) => {
   socket.setEncoding('utf-8');
@@ -32,7 +33,7 @@ server.on('connection', (socket) => {
   });
 });
 
-server.listen(8383, () => console.log('Chat server is up!'));
+server.listen(PORT, () => console.log('Chat server is up!'));
 
 function sendToAll(from, data) {
   Object.entries(participents).forEach(([id, p]) => {
