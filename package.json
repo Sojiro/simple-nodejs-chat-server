@@ -2,9 +2,9 @@
   "name": "simple-nodejs-chat-server",
   "version": "1.0.0",
   "description": "",
-  "main": "chat.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node chat.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
